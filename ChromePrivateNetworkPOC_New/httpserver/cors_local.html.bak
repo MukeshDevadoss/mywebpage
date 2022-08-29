@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script> 
+        var invocation = new XMLHttpRequest();
+        var url = 'https://ccx1-92-183.cisco.com/appadmin/calendar/list.do';
+		var body = '<?xml version="1.0"?><person><name>Arun</name></person>';
+             
+        function callOtherDomain(){
+            if(invocation)
+            {
+              invocation.open('GET', url, true);
+              invocation.onreadystatechange = handler;
+			  //invocation.setRequestHeader("Content-Type", "application/xml; charset=utf-8");
+			  invocation.setRequestHeader("Authorization", "Basic YWRtaW46MTNDY2J1MTM=");
+			  invocation.send();
+            }
+        }
+        function handler()
+        {
+            alert("CORS Demo");
+        }
+    </script>
+</head>
+<body>
+    <img src="https://10.78.92.183/appadmin/themes/VtgBlaf/HeaderMidLTR.gif"/>
+    <button onclick="callOtherDomain()">CORS</button>    
+</body>
+</html>
