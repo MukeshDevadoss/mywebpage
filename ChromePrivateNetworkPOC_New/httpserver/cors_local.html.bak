@@ -7,7 +7,7 @@
     <title>Document</title>
     <script> 
         var invocation = new XMLHttpRequest();
-        var url = 'https://ccx1-92-183.cisco.com/appadmin/calendar/list.do';
+        var url = 'https://192.168.1.21/appadmin/calendar/list.do';
 		var body = '<?xml version="1.0"?><person><name>Arun</name></person>';
              
         function callOtherDomain(){
@@ -27,7 +27,7 @@
     </script>
 </head>
 <body>
-    <img src="https://10.78.92.183/appadmin/themes/VtgBlaf/HeaderMidLTR.gif"/>
+    <img src="https://192.168.1.21/appadmin/themes/VtgBlaf/HeaderMidLTR.gif"/>
     <button onclick="callOtherDomain()">CORS</button>    
 </body>
 </html>
