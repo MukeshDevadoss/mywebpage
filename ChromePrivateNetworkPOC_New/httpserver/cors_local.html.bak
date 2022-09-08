@@ -20,7 +20,7 @@
 					}
 				};
               invocation.open('GET', url, true);
-              invocation.onreadystatechange = handler;
+              //invocation.onreadystatechange = handler;
 			  invocation.setRequestHeader("Content-Type", "application/xml; charset=utf-8");
 			  invocation.setRequestHeader("Authorization", "Basic YWRtaW46MTNDY2J1MTM=");
 			  invocation.send();
