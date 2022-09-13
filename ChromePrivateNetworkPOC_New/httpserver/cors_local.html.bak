@@ -32,6 +32,6 @@
     </script>
 </head>
 <body>
-	<iframe src="https://uccx1-27.cisco.com:8445/desktop" height="800" width="600" title="Iframe Example"></iframe>
+	<iframe src="/wid241.htm" height="800" width="600" title="Iframe Example"></iframe>
 </body>
 </html>
