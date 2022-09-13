@@ -9,14 +9,14 @@
         var invocation = new XMLHttpRequest();
         var url = 'https://10.78.92.183/appadmin/calendar/list.do';
 		var body = '<?xml version="1.0"?><person><name>Arun</name></person>';
-             
+		         
         function callOtherDomain(){
             if(invocation)
             {
 			  invocation.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
 					   // Typical action to be performed when the document is ready:
-					   document.getElementById("Document").innerHTML = xhttp.responseText;
+					   document.getElementById("Document").innerHTML = invocation.responseText;
 					}
 				};
               invocation.open('GET', url, true);
@@ -35,5 +35,6 @@
 <body>
     <img src="https://10.78.92.183/appadmin/themes/VtgBlaf/HeaderMidLTR.gif"/>
     <button onclick="callOtherDomain()">CORS</button>    
+	<iframe src="C:\Users\mdevados\Downloads\ChromePrivateNetworkPOC_New\httpserver\wid241.htm" height="200" width="300" title="Iframe Example"></iframe>
 </body>
 </html>
